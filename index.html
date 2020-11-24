@@ -17,7 +17,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+ <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,20 +35,42 @@
   <meta name="msapplication-TileColor" content="#2F3BA2">
 </head>
 <body>
-  <div class="columns">
-    <div class="column">
-      <p><button type="button" onclick="getStream('video')">Grab video</button></p>
-      
-      <video controls autoplay style="height:180px; width: 240px;"></video>
-    </div>
-    <div class="column">
-      <p><button type="button" onclick="getStream('audio')">Grab audio</button></p>
-      
-      <audio controls></audio>
-    </div>
-  </div>
-  
+ 
   <script src="scripts/app.js" async></script>
+
+
+  <button id="askButton">Ask for location</button>
+
+  <div id="target"></div>
+
+
+
+  <table>
+    <tr>
+      <td>API used</td>
+      <td id="moApi"></td>
+    </tr>
+    <tr>
+      <td>linear acceleration (excl. gravity)</td>
+      <td id="moAccel"></td>
+    </tr>
+    <tr>
+      <td>acceleration incl. gravity</td>
+      <td id="moAccelGrav"></td>
+    </tr>
+    <tr>
+      <td>rotation rate</td>
+      <td id="moRotation"></td>
+    </tr>
+    <tr>
+      <td>interval (ms)</td>
+      <td id="moInterval"></td>
+    </tr>
+  </table>
+  
+  <p><small>Demo based on <a href="https://www.html5rocks.com/en/tutorials/device/orientation/" target="_blank" rel="noopener">HTML5 Rocks</a> article.</small></p>
 
 </body>
 </html>
+
+
